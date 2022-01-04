@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-import { callGetRegistrationStatus } from '../contract/TwoRivalBooking';
+// import { callGetRegistrationStatus } from '../contract/TwoRivalBooking';
 
 const Home = () => {
 
@@ -19,7 +19,7 @@ const Home = () => {
     return (
 
         <div className="page">
-            Click <Link to='/register'>here</Link> to Register
+            Click <Link to='/register'>here</Link> to Register / Book Meeting Room
         </div>
 
     )

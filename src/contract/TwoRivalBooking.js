@@ -1,6 +1,6 @@
 import web3 from '../web3';
 import env from '../env';
-import { call, callWithOneParam } from '../components/common/web3/call';
+import { call, callWithTwoParam } from '../components/common/web3/call';
 import { walletConnected } from '../components/wallet/Wallet';
 
 const TRB = require('./TwoRivalBooking.json');
@@ -14,9 +14,12 @@ export const TRBContract = new web3.eth.Contract(
 export const callGetRegistrationStatus = async () => {
     return await call(TRB.abi, env.CONTRACT_ADDRESS, 'registrationStatus', web3);
 }
-export const callGetRoom = async (param) => {
-    return await callWithOneParam(TRB.abi, env.CONTRACT_ADDRESS, 'getRoom', param, web3);
+export const callGetRoom = async (param, param2) => {
+    return await callWithTwoParam(TRB.abi, env.CONTRACT_ADDRESS, 'getRoom', param, param2, web3);
 }
+// export const callGetRoom = async (param) => {
+//     return await callWithOneParam(TRB.abi, env.CONTRACT_ADDRESS, 'getRoom', param, web3);
+// }
 
 //write
 export const bookMeetingRoom = async (hour, roomNum) => {

@@ -41,8 +41,8 @@ const BookRoom = () => {
         let num = parseInt(localStorage.getItem('room'));
         setRoomNum(num + 1);
         localStorage.setItem('room', num + 1);
-        const ra = await callGetRoom(localStorage.getItem('room'));
-        console.log('ra: ' + ra);
+        const ra = await callGetRoom(localStorage.getItem('room'),
+            (localStorage.getItem('group')) ? localStorage.getItem('group') : "P"); //tmp
         setRoomArray(ra);
     }
 

@@ -44,6 +44,7 @@ const Register = () => {
     }
 
     const clickRegister = (groupName) => {
+        localStorage.setItem('group', groupName); //tmp
         handleFunctionOneParam(registerUser, groupName);
     };
 
