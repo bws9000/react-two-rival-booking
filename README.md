@@ -1,3 +1,7 @@
+# contract tests
+https://github.com/bws9000/react-two-rival-booking/tree/main/src/contract
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
